@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.sebastien-lempens.com)",
+      "Bash(curl -L -A \"Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36\" \"https://www.sebastien-lempens.com/\")",
+      "Bash(powershell -Command \"Invoke-WebRequest -Uri 'https://www.sebastien-lempens.com/' -UserAgent 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36' | Select-Object -ExpandProperty Content\")",
+      "WebSearch",
+      "WebFetch(domain:www.awwwards.com)",
+      "WebFetch(domain:www.igloo.inc)",
+      "WebFetch(domain:www.webgpu.com)",
+      "WebFetch(domain:loui.work)",
+      "Bash(curl -sI \"https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js\")"
+    ]
+  }
+}
