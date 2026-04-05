@@ -655,7 +655,6 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             transition: var(--transition);
             border: 2px solid transparent;
-            animation: slideInUp 0.6s ease-out forwards;
             opacity: 0;
         }
 
@@ -667,7 +666,6 @@
             transition: var(--transition);
             display: flex;
             flex-direction: column;
-            animation: fadeInUp 0.8s ease-out forwards;
             opacity: 0;
         }
 
@@ -678,7 +676,6 @@
             border-left: 4px solid var(--color-primary);
             border-radius: 4px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            animation: fadeInLeft 0.8s ease-out forwards;
             opacity: 0;
         }
 
@@ -688,316 +685,6 @@
             border-radius: 8px;
             border-left: 4px solid var(--color-accent);
             transition: var(--transition);
-            animation: scaleIn 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        /* Hero section animation */
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            animation: fadeInDown 0.8s ease-out 0.2s forwards;
-            opacity: 0;
-        }
-
-        .hero .tagline {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            opacity: 0.95;
-            animation: fadeInUp 0.8s ease-out 0.4s forwards;
-            opacity: 0;
-        }
-
-        .hero .subtitle {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            animation: fadeInUp 0.8s ease-out 0.6s forwards;
-            opacity: 0;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease-out 0.8s forwards;
-            opacity: 0;
-        }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        /* Card hover lift effect */
-        .skill-card:hover,
-        .project-card:hover,
-        .cert-item:hover {
-            transform: translateY(-8px);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-
-        /* ========== ANIMATIONS ========== */
-
-        /* Fade-in animation on scroll */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Scale animation */
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        /* Rotate animation */
-        @keyframes rotateIn {
-            from {
-                opacity: 0;
-                transform: rotate(-10deg) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: rotate(0deg) scale(1);
-            }
-        }
-
-        /* Gradient text animation */
-        @keyframes gradientShift {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        /* Floating animation */
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        /* Glow animation */
-        @keyframes glow {
-            0%, 100% {
-                box-shadow: 0 0 5px rgba(45, 139, 139, 0.3);
-            }
-            50% {
-                box-shadow: 0 0 20px rgba(50, 184, 198, 0.6);
-            }
-        }
-
-        /* Pulse animation */
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.7;
-            }
-        }
-
-        /* Slide in animation */
-        @keyframes slideInUp {
-            from {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Bounce animation */
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-
-        /* Animation utility classes */
-        .fade-in-up {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-
-        .fade-in-down {
-            animation: fadeInDown 0.8s ease-out forwards;
-        }
-
-        .fade-in-left {
-            animation: fadeInLeft 0.8s ease-out forwards;
-        }
-
-        .fade-in-right {
-            animation: fadeInRight 0.8s ease-out forwards;
-        }
-
-        .scale-in {
-            animation: scaleIn 0.8s ease-out forwards;
-        }
-
-        .rotate-in {
-            animation: rotateIn 0.8s ease-out forwards;
-        }
-
-        .float-animation {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .glow-animation {
-            animation: glow 2s ease-in-out infinite;
-        }
-
-        .pulse-animation {
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .bounce-animation {
-            animation: bounce 2s ease-in-out infinite;
-        }
-
-        /* Staggered animations */
-        .stagger-1 { animation-delay: 0.1s; }
-        .stagger-2 { animation-delay: 0.2s; }
-        .stagger-3 { animation-delay: 0.3s; }
-        .stagger-4 { animation-delay: 0.4s; }
-        .stagger-5 { animation-delay: 0.5s; }
-        .stagger-6 { animation-delay: 0.6s; }
-
-        /* Enhanced hover animations */
-        .skill-card {
-            background-color: var(--color-surface);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            transition: var(--transition);
-            border: 2px solid transparent;
-            animation: slideInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-        .project-card {
-            background-color: #F9F9F9;
-            border: 1px solid var(--color-border);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            animation: fadeInUp 0.8s ease-out forwards;
-            opacity: 0;
-        }
-
-        .education-item {
-            background-color: var(--color-surface);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--color-primary);
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            animation: fadeInLeft 0.8s ease-out forwards;
-            opacity: 0;
-        }
-
-        .cert-item {
-            background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--color-accent);
-            transition: var(--transition);
-            animation: scaleIn 0.6s ease-out forwards;
             opacity: 0;
         }
 
@@ -1187,12 +874,12 @@
             <div class="contact-info">
                 <p><strong>📧 Email:</strong> ssanjith960@gmail.com</p>
                 <p><strong>📱 Phone:</strong> 8015130124</p>
-                <p><strong>📍 Location:</strong> Kattankulathur</p>
+                <p><strong>📍 Location:</strong> Ranipet, Tamil Nadu</p>
                 <p><strong>🎓 CGPA:</strong> 8.0 / 10.0</p>
                 <p><strong>📚 Currently:</strong> B.Tech CSE (2024-2028)</p>
                 <hr style="margin: 1rem 0; border: none; border-top: 1px solid #DDD;">
-                <p><strong>🔗 GitHub:</strong> <a href="#" style="color: var(--color-primary);">Your GitHub Profile</a></p>
-                <p><strong>💼 LinkedIn:</strong> <a href="#" style="color: var(--color-primary);">Your LinkedIn Profile</a></p>
+                <p><strong>🔗 GitHub:</strong> <a href="https://github.com/sanjiri2318" target="_blank" style="color: var(--color-primary);">github.com/sanjiri2318</a></p>
+                <p><strong>💼 LinkedIn:</strong> <a href="https://www.linkedin.com/in/sanjithkumar-sukumar/" target="_blank" style="color: var(--color-primary);">linkedin.com/in/sanjithkumar-sukumar</a></p>
             </div>
         </div>
     </section>
@@ -1381,8 +1068,8 @@
             <div class="contact-links">
                 <a href="mailto:ssanjith960@gmail.com" class="contact-link">📧 Email Me</a>
                 <a href="tel:8015130124" class="contact-link">📱 Call Me</a>
-                <a href="#" class="contact-link">💼 LinkedIn</a>
-                <a href="#" class="contact-link">🔗 GitHub</a>
+                <a href="https://www.linkedin.com/in/sanjithkumar-sukumar/" target="_blank" class="contact-link">💼 LinkedIn</a>
+                <a href="https://github.com/sanjiri2318" target="_blank" class="contact-link">🔗 GitHub</a>
             </div>
         </div>
     </section>
